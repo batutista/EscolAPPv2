@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="br.com.italoqueiroz.escolapp.Cadastrar"
+    tools:context="br.com.italoqueiroz.escolapp.Atividades.Cadastrar"
     android:layout_marginRight="8dp"
     android:layout_marginLeft="8dp"
     android:layout_marginBottom="8dp">
