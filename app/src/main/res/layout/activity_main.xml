@@ -84,13 +84,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Facebook"
-            android:layout_weight="0.5"/>
+            android:layout_weight="0.5"
+            android:onClick="loginFacebook"/>
 
         <Button
+            android:id="@+id/login_gmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gmail"

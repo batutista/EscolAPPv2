@@ -5,10 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import br.com.italoqueiroz.escolapp.R;
 
 public class Acessar extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,4 +41,7 @@ public class Acessar extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
