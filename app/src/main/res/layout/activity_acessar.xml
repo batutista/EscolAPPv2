@@ -6,15 +6,25 @@
     android:layout_height="match_parent"
     tools:context="br.com.italoqueiroz.escolapp.Atividades.Acessar"
     android:orientation="vertical"
-    android:layout_marginRight="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginBottom="8dp">
+    android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/text_sign_in_status"
+        android:id="@+id/text_user_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        tools:text="Olá Fulano De Tal !!" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cardview_dark_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/buttonMapas"
@@ -25,7 +35,6 @@
         android:text="Mapas"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:onClick="mostraMapa"
         />
 
     <Button
@@ -37,7 +46,17 @@
         android:text="Lista de Escolas"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:onClick="mostraEscolas"
+        />
+
+    <Button
+        android:id="@+id/buttonEditarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Editar Perfil"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
         />
 
 </LinearLayout>

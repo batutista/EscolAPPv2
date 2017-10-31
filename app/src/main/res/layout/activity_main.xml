@@ -4,47 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/com_facebook_button_border_color_focused"
     android:orientation="vertical"
     tools:context="br.com.italoqueiroz.escolapp.Atividades.MainActivity">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/mochila2"
-        android:layout_weight="1"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="EscolAPP"
-        android:textColor="@android:color/black"
-        android:textSize="40sp" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="16dp"
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:src="@drawable/mochila2" />
+
 
     <EditText
         android:id="@+id/acessar_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Login"
         android:inputType="text"
-        android:hint="Login"/>
+        android:textColor="@android:color/holo_blue_dark" />
 
     <EditText
         android:id="@+id/acessar_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Senha"
         android:inputType="textPassword"
-        android:hint="Senha" />
+        android:textColor="@android:color/holo_blue_dark" />
 
     <LinearLayout
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <Button
@@ -71,33 +78,29 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:text="Acessar com: "/>
+
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/login_facebook"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Facebook"
             android:layout_weight="0.5"
-            android:onClick="loginFacebook"/>
+            android:onClick="loginFacebook"
+            android:layout_gravity="center"/>
 
-        <Button
+        <com.google.android.gms.common.SignInButton
             android:id="@+id/login_gmail"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gmail"
-            android:layout_weight="0.5"/>
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            app:buttonSize="wide" />
     </LinearLayout>
 
 </LinearLayout>
