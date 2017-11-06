@@ -40,7 +40,7 @@ public class MapasEscolas extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in IESB and move the camera
         LatLng iesb = new LatLng(-15.8347169,-47.9141144);
         mMap.addMarker(new MarkerOptions().position(iesb).title("IESB ASA SUL"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(iesb));

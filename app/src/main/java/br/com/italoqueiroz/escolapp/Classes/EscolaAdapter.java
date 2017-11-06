@@ -51,6 +51,7 @@ public class EscolaAdapter extends ArrayAdapter<Escola> {
         nomeEscola.setText(currentEscola.getNome());
         emailEscola.setText(currentEscola.getEmail());
 
+
         return listItemView;
     }
 }
