@@ -75,7 +75,8 @@
             android:name=".Atividades.ListaEscolas"
             android:label="Lista de Escolas" />
         <activity android:name=".Atividades.EditarPerfil" />
-        <activity android:name=".Atividades.MostraEscola"></activity>
+        <activity android:name=".Atividades.MostraEscola" />
+        <activity android:name=".Atividades.Reclamacao"></activity>
     </application>
 
 </manifest>

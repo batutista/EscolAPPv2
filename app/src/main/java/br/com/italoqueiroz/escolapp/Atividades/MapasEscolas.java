@@ -1,5 +1,6 @@
 package br.com.italoqueiroz.escolapp.Atividades;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -15,11 +16,26 @@ import br.com.italoqueiroz.escolapp.R;
 public class MapasEscolas extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Float latitude;
+    private Float longitude;
+    private String nome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapas_escolas);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        nome = bundle.getString("nome");
+        latitude = bundle.getFloat("latitude");
+        longitude = bundle.getFloat("longitude");
+
+
+
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -41,8 +57,8 @@ public class MapasEscolas extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in IESB and move the camera
-        LatLng iesb = new LatLng(-15.8347169,-47.9141144);
-        mMap.addMarker(new MarkerOptions().position(iesb).title("IESB ASA SUL"));
+        LatLng iesb = new LatLng(latitude,longitude);
+        mMap.addMarker(new MarkerOptions().position(iesb).title(nome));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(iesb));
     }
 }

@@ -114,8 +114,10 @@ public class ListaEscolas extends AppCompatActivity implements ClickRecyclerView
 
         Intent intent = new Intent(ListaEscolas.this, MostraEscola.class);
         Bundle bundle = new Bundle();
-        bundle.putString("nome_escola", escola.getNome());
-        bundle.putString("email_escola", escola.getEmail());
+        bundle.putString("nome", escola.getNome());
+        bundle.putString("email", escola.getEmail());
+        bundle.putFloat("latitude", escola.getLatitude());
+        bundle.putFloat("longitude", escola.getLongitude());
         intent.putExtras(bundle);
         startActivity(intent);
 

@@ -4,41 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="br.com.italoqueiroz.escolapp.Atividades.MostraEscola"
+    tools:context="br.com.italoqueiroz.escolapp.Atividades.Reclamacao"
     android:layout_margin="8dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/mostra_escola_nome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:hint="Nome da escola"/>
+            android:text="Título:"/>
+
+        <EditText
+            android:id="@+id/reclamacao_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escreva o título"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
-            android:id="@+id/mostra_escola_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email da escola"/>
-
-        <Button
-            android:id="@+id/botao_localizacao"
-            android:layout_width="wrap_content"
+            android:text="Mensagem:"/>
+        <EditText
+            android:id="@+id/reclamacao_mensagem"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ver Localização"/>
+            android:hint="Escreva a mensagem"/>
 
-        <Button
-            android:id="@+id/botao_enviar_reclamacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enviar Reclamação"/>
+
+
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/reclamacao_enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="Enviar"/>
 
 
 </RelativeLayout>
