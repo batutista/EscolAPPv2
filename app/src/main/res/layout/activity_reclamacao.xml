@@ -15,19 +15,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Título:"/>
+            android:text="Título:"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/reclamacao_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Escreva o título"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="24dp"
+            android:maxLines="1"
+            android:maxLength="45"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mensagem:"/>
+            android:text="Mensagem:"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/reclamacao_mensagem"
             android:layout_width="match_parent"
@@ -42,11 +48,15 @@
 
     <Button
         android:id="@+id/reclamacao_enviar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:text="Enviar"/>
+        android:layout_alignParentRight="true"
+        android:background="@color/azul_card_background"
+        android:text="Enviar"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
 
 
 </RelativeLayout>

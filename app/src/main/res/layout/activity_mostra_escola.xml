@@ -17,26 +17,48 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:hint="Nome da escola"/>
+            android:hint="Nome da escola"
+            android:textSize="24dp"/>
 
         <TextView
             android:id="@+id/mostra_escola_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email da escola"/>
+            android:hint="Email da escola"
+            android:textSize="16dp"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/botao_localizacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ver Localização"/>
+            android:layout_weight="1"
+            android:background="@color/azul_card_background"
+            android:text="Ver Localização"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginRight="4dp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/botao_enviar_reclamacao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enviar Reclamação"/>
-
+            android:layout_weight="1"
+            android:background="@color/azul_card_background"
+            android:text="Enviar Reclamação"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

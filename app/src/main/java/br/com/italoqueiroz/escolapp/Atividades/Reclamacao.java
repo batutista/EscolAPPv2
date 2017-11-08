@@ -47,7 +47,6 @@ public class Reclamacao extends AppCompatActivity {
                 intentEnviarEmail.putExtra(Intent.EXTRA_SUBJECT, tituloReclamacao.getText().toString());
                 intentEnviarEmail.putExtra(Intent.EXTRA_TEXT, mensagemReclamacao.getText().toString());
                 //intentEnviarEmail.putExtra(Intent.EXTRA_EMAIL, email.toString());
-                //intentEnviarEmail.setData(Uri.parse("mailto:" + email));
                 //intentEnviarEmail.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(Intent.createChooser(intentEnviarEmail, "Send Email"));
             }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,55 +8,65 @@
     android:orientation="vertical"
     android:layout_margin="8dp">
 
-    <TextView
-        android:id="@+id/text_user_nome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:textColor="@color/cardview_dark_background"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        android:gravity="center"
-        tools:text="Olá Fulano De Tal !!" />
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/cardview_dark_background"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/text_user_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            tools:text="Olá Fulano De Tal !!" />
 
-    <Button
-        android:id="@+id/buttonMapas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_blue_dark"
-        android:text="Mapas"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cardview_dark_background"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/buttonListaEscolas"
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_blue_dark"
-        android:text="Lista de Escolas"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        />
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
 
-    <Button
-        android:id="@+id/buttonEditarPerfil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_blue_dark"
-        android:text="Editar Perfil"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        />
+        <Button
+            android:id="@+id/buttonListaEscolas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Lista de Escolas"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonEditarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Editar Perfil"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

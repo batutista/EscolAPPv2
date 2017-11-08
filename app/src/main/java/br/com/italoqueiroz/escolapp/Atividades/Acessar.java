@@ -57,7 +57,7 @@ public class Acessar extends AppCompatActivity {
         textoUsuario = (TextView)findViewById(R.id.text_user_nome);
 
 
-
+        /*
         Button botaoMapas = (Button) findViewById(R.id.buttonMapas);
         botaoMapas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +66,7 @@ public class Acessar extends AppCompatActivity {
                 startActivity(mapas);
             }
         });
+        */
 
         Button listaEscolas = (Button)findViewById(R.id.buttonListaEscolas);
         listaEscolas.setOnClickListener(new View.OnClickListener() {
