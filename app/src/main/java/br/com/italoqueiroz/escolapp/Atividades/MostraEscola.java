@@ -38,6 +38,12 @@ public class MostraEscola extends AppCompatActivity {
         email_escola_textView = (TextView)findViewById(R.id.mostra_escola_email);
         email_escola_textView.setText(email);
 
+        TextView latitude_textview = (TextView)findViewById(R.id.latitude_escola);
+        latitude_textview.setText(latitude.toString());
+        TextView longitude_textview = (TextView)findViewById(R.id.longitude_escola);
+        longitude_textview.setText(longitude.toString());
+
+
 
 
         Button botao_localizacao = (Button)findViewById(R.id.botao_localizacao);
