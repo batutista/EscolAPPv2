@@ -1,5 +1,6 @@
 package br.com.italoqueiroz.escolapp.Atividades;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class ListaEscolas extends AppCompatActivity implements ClickRecyclerView
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     EscolaRecyclerAdapter adapter;
+    private ProgressDialog simpleWaitDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,9 @@ public class ListaEscolas extends AppCompatActivity implements ClickRecyclerView
         escolas.add(new Escola("Escola onze"));
         escolas.add(new Escola("Escola doze"));
         */
+        simpleWaitDialog = ProgressDialog.show(ListaEscolas.this, "Aguarde", "Carregando Escolas...");
+
+
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://mobile-aceite.tcu.gov.br/nossaEscolaRS/rest/")
@@ -68,7 +73,8 @@ public class ListaEscolas extends AppCompatActivity implements ClickRecyclerView
             @Override
             public void onResponse(Call<List<Escola>> call, retrofit2.Response<List<Escola>> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(ListaEscolas.this, "Response teve sucesso", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(ListaEscolas.this, "Response teve sucesso", Toast.LENGTH_SHORT).show();
+                    simpleWaitDialog.dismiss();
                     escolas = response.body();
 /*
                     EscolaAdapter adapter = new EscolaAdapter(ListaEscolas.this, escolas);
